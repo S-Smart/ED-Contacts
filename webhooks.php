@@ -25,10 +25,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 //******************************************************************
 } else if ($inputtext == "eng")||($inputtext == "engineer")||($inputtext == "Eng")||($inputtext == "Engineer")||($inputtext == "วิศวกร") {
  	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Engineer ( ID:21)  คุณบุญชัย   BW  2200  1858  094-4789929\n  \n
-						Engineer ( ID:31)  คุณศฎายุทธ  SYK  2201  1709  065-6495551\n  \n
-						Engineer ( ID:32)  คุณสืบสอง  SKH  2230  1710  081-9399963\n  \n
-						Engineer ( ID:72)  คุณกมล  KHO  2250  1746  092-2592097\n  \n";
+	$arrPostData['messages'][0]['text'] = "Engineer ( ID:21)  คุณบุญชัย   BW  2200  1858  094-4789929\n  \nEngineer ( ID:31)  คุณศฎายุทธ  SYK  2201  1709  065-6495551\n  \nEngineer ( ID:32)  คุณสืบสอง  SKH  2230  1710  081-9399963\n  \nEngineer ( ID:72)  คุณกมล  KHO  2250  1746  092-2592097\n  \n";
   
 } else if ($inputtext == "ปิดไฟนอน1") {
  // 	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
