@@ -20,11 +20,11 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "ชื่อ 'อินเตอร์' ครับท่าน";
   
-} else if ($inputtext == "ทำอะไรได้บ้าง") {
+} else if ($inputtext == "ทำอะไรได้บ้าง")||($inputtext == "ทำอะไร")||($inputtext == "มีไว้ทำไม") ||($inputtext == "ความสามารถ")  {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "เปิด ปิด ไฟ แอร์ เช็คอุณหภูมิ ครับท่าน";
-  
-
+	$arrPostData['messages'][0]['text'] = "ค้นหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง";
+  	$arrPostData['messages'][0]['text'] = "ในอนาคตเราจะพัฒนาระบบเพื่อช่วยให้ท่านทำงานได้สะดวกขึ้นครับ";
+	$arrPostData['messages'][0]['text'] = "สามารถแนะนำคำติชมได้ที่ส่วน......ใครดี";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
