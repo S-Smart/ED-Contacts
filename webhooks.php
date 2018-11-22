@@ -20,13 +20,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
   
 } else if ($inputtext == "ทำอะไรได้บ้าง") {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ค้าหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง";
-	$arrPostData['messages1'][0]['type'] = 'text';
-  	$arrPostData['messages1'][0]['text'] = "ในอนาคตเราจะใช้ช่องทางนี้เพื่ออำนวยความสะดวกให้กับท่าน";
-	$arrPostData['messages2'][0]['type'] = 'text';
-	$arrPostData['messages2'][0]['text'] = "หากท่านมีคำแนะนำใด ๆ สามารถแจ้งได้เลยที่.....";
-	$arrPostData['messages3'][0]['type'] = 'text';
-	$arrPostData['messages3'][0]['text'] = "ขอบคุณครับ";
+	$arrPostData['messages'][0]['text'] = "ค้าหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง"||"ในอนาคตเราจะใช้ช่องทางนี้เพื่ออำนวยความสะดวกให้กับท่าน";
 	
 } else if ($inputtext == "เปิดไฟนอน1") {
  // 	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
