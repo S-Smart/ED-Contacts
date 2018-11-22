@@ -6,15 +6,13 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 $inputtext = $arrJson['events'][0]['message']['text'];
-$w = (explode(" ",$inputtext)); //ถ้าถามอากาศ เช่น อากาศ เชียงใหม่
+//$w = (explode(" ",$inputtext)); //ถ้าถามอากาศ เช่น อากาศ เชียงใหม่
     					    
 $arrPostData = array();
 	
 if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "สวัสดีครับ")||($inputtext == "สวัสดีค่ะ")||($inputtext == "อินเตอร์")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน";
-	
-  //**************************************************************************************
 	
 } else if (($inputtext == "ชื่ออะไร")||($inputtext == "ใคร")||($inputtext == "คุณเป็นใคร")) {
 	$arrPostData['messages'][0]['type'] = 'text';
@@ -23,8 +21,6 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 } else if ($inputtext == "ทำอะไรได้บ้าง")||($inputtext == "ทำอะไร")||($inputtext == "มีไว้ทำไม") ||($inputtext == "ความสามารถ")  {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "ค้นหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง";
-  	//$arrPostData['messages'][0]['text'] = "ในอนาคตเราจะพัฒนาระบบเพื่อช่วยให้ท่านทำงานได้สะดวกขึ้นครับ";
-	//$arrPostData['messages'][0]['text'] = "สามารถแนะนำคำติชมได้ที่ส่วน......ใครดี";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
