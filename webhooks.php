@@ -12,7 +12,7 @@ $arrPostData = array();
 	
 if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "สวัสดีครับ")||($inputtext == "สวัสดีค่ะ")||($inputtext == "อินเตอร์")) {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน \n038-685155";
+	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน";
   
 } else if (($inputtext == "ชื่ออะไร")||($inputtext == "ใคร")||($inputtext == "คุณเป็นใคร")) {
 	$arrPostData['messages'][0]['type'] = 'text';
@@ -21,23 +21,26 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 } else if ($inputtext == "ทำอะไรได้บ้าง") {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "ค้าหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง\n \nในอนาคตเราจะใช้ช่องทางนี้เพื่ออำนวยความสะดวกให้กับท่าน";
-	
+
+} else if (($inputtext == "help")||($inputtext == "Help")) {
+	$arrPostData['messages'][0]['type'] = 'text';
+	$arrPostData['messages'][0]['text'] = "ค้าหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง พิมพ์กลุ่มที่ต้องการหา เช่น Manager  EE  ME  ENG\n \nในอนาคตเราจะใช้ช่องทางนี้เพื่ออำนวยความสะดวกให้กับท่าน";
 
 } else if (($inputtext == "ed manager")||($inputtext == "manager")||($inputtext == "Manager")||($inputtext == "ผู้จัดการ")||($inputtext == "ผจส.")||($inputtext == "ผจส")||($inputtext == "ผจฝ.")||($inputtext == "ผจส")) {
  	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Manager ( ID:21)  คุณบุญชัย   BW  2200  1858  094-4789929\n Manager ( ID:31)  คุณศฎายุทธ  SYK  2201  1709  065-6495551\n Manager ( ID:32)  คุณสืบสอง  SKH  2230  1710  081-9399963\n Manager ( ID:72)  คุณกมล  KHO  2250  1746  092-2592097\n Manager ( ID:1154)  K. Makoto  MH  2231  1701  061-3848087\n Manager ( ID:1155)  K. Shinsuke  SS  2211  1702  063-2074991";
-
+	$arrPostData['messages'][0]['text'] = "Manager ( ID:21)  คุณบุญชัย   BW  2200  1858  T. 094-4789929\n \nManager ( ID:31)  คุณศฎายุทธ  SYK  2201  1709  T. 065-6495551\n \nManager ( ID:32)  คุณสืบสอง  SKH  2230  1710  T. 081-9399963\n \nManager ( ID:72)  คุณกมล  KHO  2250  1746  T. 092-2592097\n \nManager ( ID:1154)  K. Makoto  MH  2231  1701  T. 061-3848087\n \nManager ( ID:1155)  K. Shinsuke  SS  2211  1702  T. 063-2074991";
+	
 } else if (($inputtext == "ee")||($inputtext == "ee eng")||($inputtext == "eng ee")||($inputtext == "EE")||($inputtext == "ไฟฟ้า")||($inputtext == "วิศวกรไฟฟ้า")||($inputtext == "ส่วนไฟฟ้า")) {
  	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Engineer ( ID:80)  คุณโอภาส  OPU  2233  1717  081-3449792\n Engineer ( ID:84)  คุณเชาวน์ดล  CM  2234  1715  085-9999873\n Engineer ( ID:100)  คุณจิตติกรณ์  JTK  2234  1345  085-0850374\n Engineer ( ID:746)  คุณสุรชาติ  SK  2233  1711  089-5849553\n Engineer ( ID:828)  คุณประกาศิต  PKS  2233  1588  089-4803555\n Engineer ( ID:837)  คุณสมิทธ์  SMJ  2234  1555  086-8863863\n Engineer ( ID:840)  คุณธรรมนูญ  TPT  2234  1871  094-4974874\n Engineer ( ID:1051)  คุณณฤพล  NR  2233  1928  085-6788846\n Engineer ( ID:1092)  คุณศาสตรา  PSK  2233  1716  085-4229358\n Engineer ( ID:1127)  คุณธราธร  TRS  2233  1945  083-5536129\n Engineer ( ID:1087)  คุณสุวัฒนานนท์  SY  2233  -  080-6745804\n Engineer ( ID:1085)  คุณศักดิ์บุรุษ   SRC  2223  1932  080-4020462\n Engineer ( ID:1197)  คุณวรวลัญช์  ปินตา  WRP  2234  -  091-0691871";
+	$arrPostData['messages'][0]['text'] = "Engineer ( ID:80)  คุณโอภาส  OPU  2233  1717  T. 081-3449792\n \nEngineer ( ID:84)  คุณเชาวน์ดล  CM  2234  1715  T. 085-9999873\n \nEngineer ( ID:100)  คุณจิตติกรณ์  JTK  2234  1345  T. 085-0850374\n \nEngineer ( ID:746)  คุณสุรชาติ  SK  2233  1711  T. 089-5849553\n \nEngineer ( ID:828)  คุณประกาศิต  PKS  2233  1588  T. 089-4803555\n \nEngineer ( ID:837)  คุณสมิทธ์  SMJ  2234  1555  T. 086-8863863\n \nEngineer ( ID:840)  คุณธรรมนูญ  TPT  2234  1871  T. 094-4974874\n \nEngineer ( ID:1051)  คุณณฤพล  NR  2233  1928  T. 085-6788846\n \nEngineer ( ID:1092)  คุณศาสตรา  PSK  2233  1716  T. 085-4229358\n \nEngineer ( ID:1127)  คุณธราธร  TRS  2233  1945  T. 083-5536129\n \nEngineer ( ID:1087)  คุณสุวัฒนานนท์  SY  2233  -  T. 080-6745804\n \nEngineer ( ID:1085)  คุณศักดิ์บุรุษ   SRC  2223  1932  T. 080-4020462\n \nEngineer ( ID:1197)  คุณวรวลัญช์  WRP  2234  -  T. 091-0691871";
 	
 } else if (($inputtext == "me")||($inputtext == "me eng")||($inputtext == "eng me")||($inputtext == "ME")||($inputtext == "เครื่องกล")||($inputtext == "วิศวกรเครื่องกล")||($inputtext == "ส่วนเครื่องกล")) {
  	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Engineer ( ID:107)  คุณวณัยชนก  ชูรักษา  WNC  2212  1478  099-4296461\n Engineer ( ID:108)  คุณประกิต  ปฐมสุบรรณกุล  POP  2212  1480  089-0388525\n Engineer ( ID:546)  คุณฤทธิชัย  กระจ่างจิต  RTK  2212  1721  086-9894823\n Engineer ( ID:564)  คุณรัฎฐพงษ์  ชูเมือง  RC  2212  1518  085-9600059\n Engineer ( ID:565)  คุณสรวิชญ์  บุญยรัตน์  SWB  2214  1517  089-2458483\n Engineer ( ID:608)  คุณคุณากร  เติมคุนานนท์  KT  2212  1728  083-1301133\n Engineer ( ID:679)  คุณทีปกร  แก้วพวง  TPK  2212  1598  085-9012388\n Engineer ( ID:1035)  คุณยชนา  เวทวงค์  YW  2212  1926  086-8401304\n Engineer ( ID:113)  คุณกิตติ  วชิรอนันต์    2226  1718  081-5768394\n Engineer ( ID:192)  คุณขวัญ  ว่องเมธากุล    2227  1361  081-8645198\n Engineer ( ID:1199)  คุณภาสกร  โกศลกิติวงศ์  PKK  2214  -  083-0140857\n Engineer ( ID:1195)  คุณพัฒนพงศ์   ใจเย็น  PJ  2214  -  084-5027628\n Engineer ( ID:1198)  คุณอัษฎา      นุชรัตน์  ATN  2214  -  081-3430066";
-
+	$arrPostData['messages'][0]['text'] = "Engineer ( ID:107)  คุณวณัยชนก  WNC  2212  1478  T. 099-4296461\n \nEngineer ( ID:108)  คุณประกิต  POP  2212  1480  T. 089-0388525\n \nEngineer ( ID:546)  คุณฤทธิชัย  RTK  2212  1721  T. 086-9894823\n \nEngineer ( ID:564)  คุณรัฎฐพงษ์  RC  2212  1518  T. 085-9600059\n \nEngineer ( ID:565)  คุณสรวิชญ์  SWB  2214  1517  T. 089-2458483\n \nEngineer ( ID:608)  คุณคุณากร  KT  2212  1728  T. 083-1301133\n \nEngineer ( ID:679)  คุณทีปกร  TPK  2212  1598  T. 085-9012388\n \nEngineer ( ID:1035)  คุณยชนา  YW  2212  1926  T. 086-8401304\n \nEngineer ( ID:113)  คุณกิตติ    2226  1718  T. 081-5768394\n \nEngineer ( ID:192)  คุณขวัญ    2227  1361  T. 081-8645198\n \nEngineer ( ID:1199)  คุณภาสกร  PKK  2214  -  T. 083-0140857\n \nEngineer ( ID:1195)  คุณพัฒนพงศ์   PJ  2214  -  T. 084-5027628\n \nEngineer ( ID:1198)  คุณอัษฎา      ATN  2214  -  T. 081-3430066";
+	
 } else if (($inputtext == "eng.")||($inputtext == "eng. eng")||($inputtext == "eng eng.")||($inputtext == "ENG")||($inputtext == "เทคโนโลยีเครื่องจักร")||($inputtext == "วิศวกรเทคโนโลยีเครื่องจักร")||($inputtext == "ส่วนเทคโนโลยีเครื่องจักร")) {
  	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Engineer ( ID:611)  คุณอดิศร   สมศิริตระกูล  ADS  2272  1726  089-4222959\n Engineer ( ID:627)  คุณวิชชุดา   พาฤทธิ์  WP  2272  1516  086-2303051\n Engineer ( ID:956)  คุณไชยวัฒน์  พรนพรัตน์  CP  2272  1727  088-0083964\n Engineer ( ID:1049)  คุณภรัณยู  บุญรักษา  PB  2251  1924  089-4324291\n Engineer ( ID:1052)  คุณสุวัฒน์  ธรรมเสนา  ST  2233  1927  061-6856441";
+	$arrPostData['messages'][0]['text'] = "Engineer ( ID:611)  คุณอดิศร   ADS  2272  1726  T. 089-4222959\n \nEngineer ( ID:627)  คุณวิชชุดา   WP  2272  1516  T. 086-2303051\n \nEngineer ( ID:956)  คุณไชยวัฒน์  CP  2272  1727  T. 088-0083964\n \nEngineer ( ID:1049)  คุณภรัณยู  PB  2251  1924  T. 089-4324291\n \nEngineer ( ID:1052)  คุณสุวัฒน์  ST  2233  1927  T. 061-6856441";
 
 /*
 } else if ($inputtext == "ON Air Condition") {
@@ -128,7 +131,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['packageId'] = "1";
 	$arrPostData['messages'][0]['stickerId'] = "408";
 
-} else if ($inputtext == "ดูรูปหน่อย") {
+} else if (($inputtext == "ขอดูรูปหน่อย")||($inputtext == "รูป")||($inputtext == "ดูรูป")) {
 	$arrPostData['messages'][0]['type'] = "image";
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://still-beach-54304.herokuapp.com/p1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://still-beach-54304.herokuapp.com/p2.jpg";
@@ -142,18 +145,14 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
-
-} else if (($inputtext == "ON Air Condition")||($inputtext == "OFF Air Condition")) {
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ขอบคุณที่ให้ผมได้ช่วยเหลือคุณ แต่..ขณะนี้ผมยังไม่สามารถสั่งงานได้ครับ";
 	
-} else if (($inputtext == "ใครสร้างคุณ")||($inputtext == "ใครสร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
+} else if (($inputtext == "ใครสร้างคุณ")||($inputtext == "ใครสร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")||($inputtext == "admin")||($inputtext == "ผู้สร้าง")||($inputtext == "Admin")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
 
 }else{
  	$arrPostData['messages'][0]['type'] = 'text';
- 	$arrPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั่งครับท่าน";
+ 	$arrPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั่งครับท่าน \nพิมพ์ help เพื่อขอความช่วยเหลือ";
 }
 
 if ($w[0] == "อากาศ" and isset($w[1])) {
