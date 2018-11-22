@@ -6,68 +6,72 @@ $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 $inputtext = $arrJson['events'][0]['message']['text'];
-//$w = (explode(" ",$inputtext)); //ถ้าถามอากาศ เช่น อากาศ เชียงใหม่
+$w = (explode(" ",$inputtext)); //??????????? ???? ????? ?????????
     					    
 $arrPostData = array();
 	
-if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "สวัสดีครับ")||($inputtext == "สวัสดีค่ะ")||($inputtext == "อินเตอร์")) {
+if(($inputtext == "??????")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "??????????")||($inputtext == "?????????")||($inputtext == "????????")) {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน";
+	$arrPostData['messages'][0]['text'] = "???????????????????????";
 	
-} else if (($inputtext == "ชื่ออะไร")||($inputtext == "ใคร")||($inputtext == "คุณเป็นใคร")) {
+  //**************************************************************************************
+	
+} else if (($inputtext == "????????")||($inputtext == "???")||($inputtext == "??????????")) {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ชื่อ 'อินเตอร์' ครับท่าน";
+	$arrPostData['messages'][0]['text'] = "???? '????????' ????????";
   
-} else if ($inputtext == "ทำอะไรได้บ้าง")||($inputtext == "ทำอะไร")||($inputtext == "มีไว้ทำไม") ||($inputtext == "ความสามารถ")  {
+} else if ($inputtext == "?????????????") {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ค้นหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง";
+	$arrPostData['messages'][0]['text'] = "???? ??? ?? ???? ???????????? ????????";
+  
 
-} else if ($inputtext == "แผนที่") {
+
+} else if ($inputtext == "??????") {
 	$arrPostData['messages'][0]['type'] = "location";
-	$arrPostData['messages'][0]['title'] = "บริษัท เอ็นเอส-สยามยูไนเต็ดสตีล จำกัด";
+	$arrPostData['messages'][0]['title'] = "?????? ???????-???????????????? ?????";
 	$arrPostData['messages'][0]['address'] = "12 Soi G2, Pakorn Songkrohraj Road,Maptaphut, Muang, Rayong 21150 Thailand";
 	$arrPostData['messages'][0]['latitude'] = "12.704393";
 	$arrPostData['messages'][0]['longitude'] = "101.113156";
  
-} else if ($inputtext == "รายงาน") {
+} else if ($inputtext == "??????") {
 //	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "หลอดไฟ: นอน1-ปิด, นอน2-เปิด*, นอน3-ปิด | แอร์: นอน1-เปิด*, นอน2-เปิด*, นอน3-ปิด";
+//	$arrPostData['messages'][0]['text'] = "??????: ???1-???, ???2-????*, ???3-??? | ????: ???1-????*, ???2-????*, ???3-???";
 
-} else if ($inputtext == "เยี่ยม") {
+} else if ($inputtext == "??????") {
 	$arrPostData['messages'][0]['type'] = "sticker";
 	$arrPostData['messages'][0]['packageId'] = "1";
 	$arrPostData['messages'][0]['stickerId'] = "13";
 
-} else if ($inputtext == "บาย") {
+} else if ($inputtext == "???") {
 	$arrPostData['messages'][0]['type'] = "sticker";
 	$arrPostData['messages'][0]['packageId'] = "1";
 	$arrPostData['messages'][0]['stickerId'] = "408";
 
-} else if ($inputtext == "ดูรูปหน่อย") {
+} else if ($inputtext == "??????????") {
 	$arrPostData['messages'][0]['type'] = "image";
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://still-beach-54304.herokuapp.com/p1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://still-beach-54304.herokuapp.com/p2.jpg";
 
-} else if (($inputtext == "ชอบวงอะไร")||($inputtext == "BNK48")||($inputtext == "น่ารัก")||($inputtext == "ร้องเพลง")) {
+} else if (($inputtext == "?????????")||($inputtext == "BNK48")||($inputtext == "??????")||($inputtext == "????????")) {
 	$arrPostData['messages'][0]['type'] = "image";
 	$arrPostData['messages'][0]['originalContentUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	$arrPostData['messages'][0]['previewImageUrl'] = "https://teen.mthai.com/app/uploads/2018/01/DPZXduGUQAERaye-1.jpg";
 	
-} else if (($inputtext == "ขอเพลง")||($inputtext == "คุกกี้เสี่ยงทาย")) {
+} else if (($inputtext == "??????")||($inputtext == "???????????????")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
 
-} else if (($inputtext == "ใครสร้างคุณ")||($inputtext == "ใครสร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")||($inputtext == "ผู้สร้าง")) {
+} else if (($inputtext == "???????????")||($inputtext == "????????")||($inputtext == "??????")||($inputtext == "??????????")||($inputtext == "????????")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
 
 }else{
  	$arrPostData['messages'][0]['type'] = 'text';
- 	$arrPostData['messages'][0]['text'] = "ไม่เข้าใจคำสั่งครับท่าน";
+ 	$arrPostData['messages'][0]['text'] = "???????????????????????";
 }
 
-if ($w[0] == "อากาศ" and isset($w[1])) {
+if ($w[0] == "?????" and isset($w[1])) {
 	$prov = $w[1];
   	$a = file_get_contents("http://m.smart-fttx.com/test-weather.php?prov=$prov&token=inb32XpbrlLgd8HMCzhbhZsJq7VxkqqA");
  	$arrPostData['messages'][0]['type'] = 'text';
