@@ -12,7 +12,7 @@ $arrPostData = array();
 	
 if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "สวัสดีครับ")||($inputtext == "สวัสดีค่ะ")||($inputtext == "อินเตอร์")) {
 	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน";
+	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน \n038-685155";
   
 } else if (($inputtext == "ชื่ออะไร")||($inputtext == "ใคร")||($inputtext == "คุณเป็นใคร")) {
 	$arrPostData['messages'][0]['type'] = 'text';
