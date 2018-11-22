@@ -23,7 +23,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['text'] = "ค้าหาเบอร์ติดต่อของฝ่ายวิศวกรรมและซ่อมบำรุง\n \nในอนาคตเราจะใช้ช่องทางนี้เพื่ออำนวยความสะดวกให้กับท่าน";
 	
 
-} else if ($inputtext == "eng")||($inputtext == "engineer")||($inputtext == "Eng")||($inputtext == "Engineer")||($inputtext == "วิศวกร") {
+} else if (($inputtext == "eng")||($inputtext == "engineer")||($inputtext == "Eng")||($inputtext == "Engineer")||($inputtext == "วิศวกร")) {
  	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "Engineer ( ID:21)  คุณบุญชัย   BW  2200  1858  094-4789929\n  \nEngineer ( ID:31)  คุณศฎายุทธ  SYK  2201  1709  065-6495551\n  \nEngineer ( ID:32)  คุณสืบสอง  SKH  2230  1710  081-9399963\n  \nEngineer ( ID:72)  คุณกมล  KHO  2250  1746  092-2592097\n  \n";
   
