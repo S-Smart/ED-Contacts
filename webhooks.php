@@ -13,7 +13,9 @@ $arrPostData = array();
 if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "Hello")||($inputtext == "สวัสดีครับ")||($inputtext == "สวัสดีค่ะ")||($inputtext == "อินเตอร์")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "มีอะไรให้รับใช้ครับท่าน";
-  
+	
+  //**************************************************************************************
+	
 } else if (($inputtext == "ชื่ออะไร")||($inputtext == "ใคร")||($inputtext == "คุณเป็นใคร")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "ชื่อ 'อินเตอร์' ครับท่าน";
@@ -22,88 +24,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "เปิด ปิด ไฟ แอร์ เช็คอุณหภูมิ ครับท่าน";
   
-} else if ($inputtext == "เปิดไฟนอน1") {
- // 	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
-  	curl_exec($mode);
-  	$digital = curl_init("http://128.199.137.43:3000/smtbot2017/digital/5/1");
-  	curl_exec($digital);
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "เปิดไฟแล้วครับ";
-  
-} else if ($inputtext == "ปิดไฟนอน1") {
- // 	$mode = curl_init("http://128.199.137.43:3000/smtbot2017/mode/5/o");
-  	curl_exec($mode);
-  	$digital = curl_init("http://128.199.137.43:3000/smtbot2017/digital/5/0");
-  	curl_exec($digital);
-//	$arrPostData['messages'][0]['type'] = 'text';
-//	$arrPostData['messages'][0]['text'] = "ปิดไฟแล้วครับ";
 
-} else if ($inputtext == "ON Air Condition") {
-  	//$mode = curl_init("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36?value=1");
-  	//curl_exec($mode);
-  	$ch = curl_init();
-
-	curl_setopt($ch, CURLOPT_URL, "https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/update/V36");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-	curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
-	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-
-	curl_setopt($ch, CURLOPT_POSTFIELDS, "[
-	  \"1\"
-	]");
-
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-	  "Content-Type: application/json"
-	));
-
-	$response = curl_exec($ch);
-	curl_close($ch);
-
-	var_dump($response);
-	
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "Air condition is ON";
-
-
-} else if ($inputtext == "ความชื้น") {
-	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/humidity");
- 	 $h = json_decode($s, true);
-  	$hu = $h['humidity'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ความชื้นสัมพัธน์ตอนนี้ " . $hu . "%";
-
-} else if ($inputtext == "อุณหภูมิ") {
-  	$s = file_get_contents("http://128.199.137.43:3000/smtbot2017/variable/temperature");
-  	$h = json_decode($s, true);
-  	$hu = $h['temperature'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิตอนนี้ " . $hu . " C";
-
-} else if ($inputtext == "Air Condition Status") {
-	//$ch = curl_init();
-
-	$s = file_get_contents("http://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
-	//$humi = curl_setopt($ch, CURLOPT_URL,"https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2";
-	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-	//curl_setopt($ch, CURLOPT_HEADER, FALSE);
-	$h = json_decode($s, true);
-  	$hu = $h['temperature'];
-	
-	//curl_exec($ch);
-	//curl_close($ch);
-
-    	//var_dump($ch);
-
-			    
-  	//$s = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V1");
-  	//$h = json_decode($s, true);
-  	//$hu = $h['V1'];
- 	//$s2 = file_get_contents("https://178.128.24.220:9443/4c90321be6474713b4f99b51a40e3c5e/get/V2");
- 	//$h2 = json_decode($s2, true);
- 	//$hu2 = $h2['V2'];
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "อุณหภูมิ " . $hu . " C | ความชื้น " . $humi . " %";
 
 } else if ($inputtext == "แผนที่") {
 	$arrPostData['messages'][0]['type'] = "location";
@@ -141,11 +62,7 @@ if(($inputtext == "สวัสดี")||($inputtext == "Hi")||($inputtext == "H
 	$arrPostData['messages'][0]['text'] = "https://www.youtube.com/watch?v=mfqJyKm20Z4";
 	
 
-} else if (($inputtext == "ON Air Condition")||($inputtext == "OFF Air Condition")) {
-	$arrPostData['messages'][0]['type'] = 'text';
-	$arrPostData['messages'][0]['text'] = "ขอบคุณที่ให้ผมได้ช่วยเหลือคุณ แต่..ขณะนี้ผมยังไม่สามารถสั่งงานได้ครับ";
-	
-} else if (($inputtext == "ใครสร้างคุณ")||($inputtext == "ใครสร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")) {
+} else if (($inputtext == "ใครสร้างคุณ")||($inputtext == "ใครสร้าง")||($inputtext == "สุดยอด")||($inputtext == "เบื้องหลัง")||($inputtext == "ผู้สร้าง")) {
 	$arrPostData['messages'][0]['type'] = 'text';
 	$arrPostData['messages'][0]['text'] = "http://www.avenger-planner.com/about/suwat-logpeet/";
 
